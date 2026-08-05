@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Explore consulting services and selected work from Guidestone Solutions."
+    content="Explore political consulting services, campaign strategy, advertising, communications, and selected work from Guidestone Solutions."
   >
 
   <meta name="theme-color" content="#17284b">
@@ -185,6 +185,10 @@
       padding: 95px 0;
     }
 
+    .section-cream {
+      background: var(--cream);
+    }
+
     .section-dark {
       color: var(--white);
       background:
@@ -273,8 +277,8 @@
 
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .work-card {
@@ -286,31 +290,21 @@
 
     .work-image {
       display: grid;
-      min-height: 250px;
       place-items: center;
-      padding: 30px;
-      background:
-        linear-gradient(
-          rgba(23, 40, 75, 0.18),
-          rgba(23, 40, 75, 0.72)
-        ),
-        linear-gradient(
-          145deg,
-          var(--blue-light),
-          var(--blue-dark)
-        );
-      text-align: center;
+      min-height: 300px;
+      padding: 20px;
+      background: var(--white);
     }
 
-    .work-image span {
-      max-width: 240px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.55rem;
-      line-height: 1.25;
+    .work-image img {
+      width: 100%;
+      max-height: 620px;
+      object-fit: contain;
+      background: var(--white);
     }
 
     .work-copy {
-      padding: 24px;
+      padding: 26px;
     }
 
     .work-type {
@@ -324,34 +318,51 @@
     .work-copy h3 {
       margin: 9px 0 10px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.45rem;
+      font-size: 1.5rem;
       font-weight: 500;
     }
 
     .work-copy p {
       margin: 0;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.95rem;
     }
 
-    .work-link {
-      display: inline-block;
-      margin-top: 18px;
-      color: var(--white);
+    .additional-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .additional-service {
+      padding: 22px;
+      color: var(--navy-dark);
+      background: var(--white);
+      border: 1px solid rgba(23, 40, 75, 0.1);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(23, 40, 75, 0.06);
       font-weight: 700;
+      text-align: center;
     }
 
-    .notice {
-      margin-top: 35px;
-      padding: 24px;
+    .proposal-note {
+      margin-top: 40px;
+      padding: 30px;
       color: var(--navy-dark);
       background: var(--cream);
       border-radius: var(--radius);
     }
 
-    .notice strong {
-      display: block;
-      margin-bottom: 5px;
+    .proposal-note h3 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .proposal-note p {
+      margin: 0;
+      color: var(--muted);
     }
 
     .button {
@@ -426,10 +437,21 @@
       text-decoration: none;
     }
 
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
     @media (max-width: 900px) {
-      .services-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .work-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+      }
+
+      .additional-services {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .cta {
@@ -463,7 +485,7 @@
       }
 
       .services-grid,
-      .work-grid {
+      .additional-services {
         grid-template-columns: 1fr;
       }
 
@@ -486,7 +508,11 @@
 <body>
   <header class="site-header">
     <div class="container navigation">
-      <a class="brand" href="index.html">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Guidestone Solutions home"
+      >
         <img
           class="brand-logo"
           src="guidestonelogo.jpeg"
@@ -555,9 +581,9 @@
           </h2>
 
           <p>
-            These service areas provide a flexible starting point
-            and can be expanded as the firm enters additional
-            consulting fields.
+            Services can be adapted to meet the needs of local
+            candidates, campaigns, political organizations,
+            nonprofits, associations, and community groups.
           </p>
         </div>
 
@@ -565,11 +591,13 @@
           <article class="service-card">
             <span class="service-number">01</span>
 
-            <h3>Campaign strategy</h3>
+            <h3>
+              Campaign strategy
+            </h3>
 
             <p>
               Strategic planning, positioning, targeting, issue
-              development, and guidance from launch through
+              development, and guidance from campaign launch through
               Election Day.
             </p>
           </article>
@@ -577,58 +605,68 @@
           <article class="service-card">
             <span class="service-number">02</span>
 
-            <h3>Advertising and creative</h3>
+            <h3>
+              Advertising and creative
+            </h3>
 
             <p>
-              Television, digital, radio, direct-mail, and social
-              concepts designed to make the right message clear
-              and memorable.
+              Digital, print, direct-mail, social media, event, radio,
+              and video concepts designed to make the right message
+              clear and memorable.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">03</span>
 
-            <h3>Message development</h3>
+            <h3>
+              Message development
+            </h3>
 
             <p>
               Research-driven narratives, talking points, speeches,
-              and communications frameworks that keep channels
-              aligned.
+              candidate positioning, and communications frameworks.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">04</span>
 
-            <h3>Public affairs</h3>
+            <h3>
+              Public affairs
+            </h3>
 
             <p>
               Stakeholder communication and issue advocacy for
-              organizations navigating policy, public opinion,
-              or reputational challenges.
+              organizations navigating policy, public opinion, or
+              reputational challenges.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">05</span>
 
-            <h3>Organizational strategy</h3>
+            <h3>
+              Organizational strategy
+            </h3>
 
             <p>
               Clear priorities, actionable plans, and communications
-              support for businesses, nonprofits, and associations.
+              support for businesses, nonprofits, associations, and
+              community organizations.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">06</span>
 
-            <h3>Rapid response</h3>
+            <h3>
+              Rapid response
+            </h3>
 
             <p>
-              Calm, focused counsel when circumstances change
-              quickly and an organization needs to respond.
+              Calm, focused counsel when circumstances change quickly
+              and a campaign or organization needs to respond.
             </p>
           </article>
         </div>
@@ -639,114 +677,258 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">
-            Advertisement portfolio
+            Featured campaign advertisements
           </p>
 
           <h2>
-            Work designed to move the message.
+            Creative work built around the message.
           </h2>
 
           <p>
-            Replace these draft cards with real campaign
-            advertisements, videos, graphics, mail pieces,
-            or case studies.
+            Selected examples of political event promotion,
+            candidate advertising, campaign branding, and local
+            election communications created by Guidestone Solutions.
           </p>
         </div>
 
         <div class="work-grid">
           <article class="work-card">
             <div class="work-image">
-              <span>
-                Leadership for the road ahead
-              </span>
+              <img
+                src="scott-jennings-ad.png"
+                alt="Lincoln Day Dinner advertisement featuring Scott Jennings"
+              >
             </div>
 
             <div class="work-copy">
               <span class="work-type">
-                Television and digital
+                Political event promotion
               </span>
 
               <h3>
-                Leadership for the Road Ahead
+                Scott Jennings Lincoln Day Dinner
               </h3>
 
               <p>
-                Placeholder for a campaign introduction
-                advertisement or organizational video.
+                Promotional creative for the McMinn County Republican
+                Party’s Lincoln Day Dinner, featuring Scott Jennings
+                alongside participating elected officials and event
+                information.
               </p>
-
-              <a class="work-link" href="#">
-                Advertisement link
-              </a>
             </div>
           </article>
 
           <article class="work-card">
             <div class="work-image">
-              <span>
-                Delivering results close to home
-              </span>
+              <img
+                src="joe-guy-ad.png"
+                alt="Campaign advertisement for Joe Guy for sheriff"
+              >
             </div>
 
             <div class="work-copy">
               <span class="work-type">
-                Digital advertising
+                Sheriff campaign advertising
               </span>
 
               <h3>
-                Results Close to Home
+                Joe Guy for Sheriff
               </h3>
 
               <p>
-                Placeholder for a social media advertisement,
-                digital campaign, or online case study.
+                Campaign creative highlighting professional service,
+                public-safety experience, community involvement, and
+                election-day messaging.
               </p>
-
-              <a class="work-link" href="#">
-                Advertisement link
-              </a>
             </div>
           </article>
 
           <article class="work-card">
             <div class="work-image">
-              <span>
-                A trusted voice for our community
-              </span>
+              <img
+                src="tony-allman-ad.png"
+                alt="Campaign advertisement for Tony Allman for county commissioner"
+              >
             </div>
 
             <div class="work-copy">
               <span class="work-type">
-                Print and direct mail
+                County commission campaign
               </span>
 
               <h3>
-                A Trusted Voice
+                Tony Allman for County Commissioner
               </h3>
 
               <p>
-                Placeholder for a direct-mail piece, brochure,
-                newspaper advertisement, or PDF.
+                Candidate branding and election advertising focused
+                on conservative values, community representation,
+                and district-level leadership.
               </p>
-
-              <a class="work-link" href="#">
-                Advertisement link
-              </a>
             </div>
           </article>
-        </div>
 
-        <div class="notice">
-          <strong>
-            Adding real advertisements later
-          </strong>
+          <article class="work-card">
+            <div class="work-image">
+              <img
+                src="steve-ross-ad.png"
+                alt="Campaign advertisement for Steve Ross for sheriff"
+              >
+            </div>
 
-          Replace each placeholder image area with an image tag,
-          and replace each empty advertisement link with the URL
-          of the video, PDF, image, or project page.
+            <div class="work-copy">
+              <span class="work-type">
+                Sheriff campaign advertising
+              </span>
+
+              <h3>
+                Steve Ross for Sheriff
+              </h3>
+
+              <p>
+                Campaign advertisement emphasizing leadership,
+                operational experience, public-safety
+                responsibilities, and qualifications for county
+                sheriff.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
+
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">
+            Additional capabilities
+          </p>
+
+          <h2>
+            Support from planning through execution.
+          </h2>
+
+          <p>
+            Services can be combined into a customized engagement
+            based on the campaign, organization, audience, timeline,
+            and desired outcome.
+          </p>
+        </div>
+
+        <div class="additional-services">
+          <div class="additional-service">
+            Campaign strategy
+          </div>
+
+          <div class="additional-service">
+            Campaign management
+          </div>
+
+          <div class="additional-service">
+            Message development
+          </div>
+
+          <div class="additional-service">
+            Campaign branding
+          </div>
+
+          <div class="additional-service">
+            Graphic design
+          </div>
+
+          <div class="additional-service">
+            Political advertising
+          </div>
+
+          <div class="additional-service">
+            Direct mail
+          </div>
+
+          <div class="additional-service">
+            Digital advertising
+          </div>
+
+          <div class="additional-service">
+            Social media strategy
+          </div>
+
+          <div class="additional-service">
+            Public affairs
+          </div>
+
+          <div class="additional-service">
+            Strategic communications
+          </div>
+
+          <div class="additional-service">
+            Event promotion
+          </div>
+        </div>
+
+        <div class="proposal-note">
+          <h3>
+            Customized proposals
+          </h3>
+
+          <p>
+            Every campaign and organization has different goals,
+            audiences, timelines, and communication needs.
+            Guidestone Solutions develops customized scopes of work
+            and pricing rather than publishing one-size-fits-all
+            packages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ===============================================================
+    CLIENT TESTIMONIALS — HIDDEN FOR FUTURE USE
+
+    This section does not display because it is inside an HTML
+    comment.
+
+    To enable testimonials later:
+
+    1. Remove the opening and closing comment markers.
+    2. Replace each example quotation with an approved client quote.
+    3. Add the client’s name, campaign, title, or organization.
+    4. Confirm written permission before publishing a testimonial.
+
+    Suggested future HTML:
+
+    <section class="section section-cream" id="testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">
+            Client testimonials
+          </p>
+
+          <h2>
+            What clients say about Guidestone.
+          </h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>
+              Client Name
+            </h3>
+
+            <p>
+              “Approved client testimonial will appear here.”
+            </p>
+
+            <p>
+              Campaign or organization
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    ===============================================================
+    -->
 
     <section class="section">
       <div class="container cta">
@@ -756,7 +938,7 @@
           </h2>
 
           <p>
-            Tell Guidestone Solutions about the goal, audience,
+            Tell the Guidestone Team about the goal, audience,
             timeline, and current challenge.
           </p>
         </div>
@@ -785,6 +967,7 @@
         <a href="services.html">Services &amp; Work</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Statement</a>
       </nav>
     </div>
   </footer>
