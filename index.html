@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Guidestone Solutions provides strategic consulting, campaign communications, advertising, and organizational guidance."
+    content="Guidestone Solutions provides strategic consulting, political campaign communications, advertising, public affairs, and organizational guidance."
   >
 
   <meta name="theme-color" content="#17284b">
@@ -241,6 +241,10 @@
       border-color: rgba(23, 40, 75, 0.15);
     }
 
+    .button-secondary:hover {
+      border-color: rgba(23, 40, 75, 0.3);
+    }
+
     .logo-card {
       position: relative;
       max-width: 430px;
@@ -389,12 +393,14 @@
       font-size: 1.06rem;
     }
 
+    .why-grid,
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
+    .why-card,
     .card {
       padding: 30px;
       color: var(--navy-dark);
@@ -402,13 +408,18 @@
       border: 1px solid rgba(23, 40, 75, 0.1);
       border-radius: var(--radius);
       box-shadow: 0 10px 30px rgba(23, 40, 75, 0.08);
+    }
+
+    .card {
       text-decoration: none;
     }
 
-    .card:hover {
+    .card:hover,
+    .why-card:hover {
       border-color: rgba(82, 127, 192, 0.45);
     }
 
+    .why-number,
     .card-number {
       display: inline-flex;
       width: 46px;
@@ -421,6 +432,7 @@
       font-family: Georgia, "Times New Roman", serif;
     }
 
+    .why-card h3,
     .card h3 {
       margin: 34px 0 12px;
       font-family: Georgia, "Times New Roman", serif;
@@ -428,6 +440,7 @@
       font-weight: 500;
     }
 
+    .why-card p,
     .card p {
       margin: 0;
       color: var(--muted);
@@ -459,11 +472,13 @@
     }
 
     .cta p {
+      max-width: 760px;
       margin: 0;
       color: rgba(255, 255, 255, 0.75);
     }
 
     .button-light {
+      flex: 0 0 auto;
       color: var(--navy);
       background: var(--white);
     }
@@ -513,6 +528,7 @@
         margin: 0;
       }
 
+      .why-grid,
       .cards {
         grid-template-columns: 1fr;
       }
@@ -574,7 +590,11 @@
 <body>
   <header class="site-header">
     <div class="container navigation">
-      <a class="brand" href="index.html">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Guidestone Solutions home"
+      >
         <img
           class="brand-logo"
           src="guidestonelogo.jpeg"
@@ -634,7 +654,7 @@
 
           <div class="actions">
             <a class="button button-primary" href="contact.html">
-              Discuss your goals
+              Tell the Guidestone Team
             </a>
 
             <a class="button button-secondary" href="services.html">
@@ -681,27 +701,95 @@
           </h2>
 
           <p>
-            Guidestone Solutions is a two-person consulting firm
-            founded by Joe and Stephanie. The firm currently focuses
-            on political strategy, advertising, communications,
-            and public affairs.
+            Guidestone Solutions is a consulting firm currently
+            focused on political strategy, campaign advertising,
+            communications, and public affairs.
           </p>
 
           <p>
-            As the firm grows, Guidestone Solutions plans to bring
-            the same disciplined approach to businesses, nonprofits,
-            community organizations, and other clients facing
-            complex public challenges.
+            Our team works directly with every client, providing
+            clear, practical guidance from initial planning through
+            execution.
+          </p>
+
+          <p>
+            As the firm grows, Guidestone Solutions will bring this
+            same hands-on approach to businesses, nonprofit
+            organizations, associations, and community groups.
           </p>
 
           <a class="button button-primary" href="about.html">
-            Meet Joe and Stephanie
+            Meet the Guidestone Team
           </a>
         </div>
       </div>
     </section>
 
     <section class="section section-cream">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">
+            Why Guidestone
+          </p>
+
+          <h2>
+            Local understanding. Direct access. Practical strategy.
+          </h2>
+
+          <p>
+            Guidestone Solutions provides focused support for
+            campaigns and organizations that need experienced
+            thinking without unnecessary layers or complexity.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <span class="why-number">01</span>
+
+            <h3>
+              Local focus
+            </h3>
+
+            <p>
+              Experience supporting school board, county commission,
+              municipal, sheriff, and other local elected-office
+              campaigns.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <span class="why-number">02</span>
+
+            <h3>
+              Direct access
+            </h3>
+
+            <p>
+              Clients work directly with the team developing the
+              strategy, creating the message, and carrying out the
+              work.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <span class="why-number">03</span>
+
+            <h3>
+              Strategic partnership
+            </h3>
+
+            <p>
+              From planning and messaging to advertising and
+              execution, Guidestone remains involved throughout
+              the project.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">
@@ -723,40 +811,48 @@
           <a class="card" href="services.html">
             <span class="card-number">01</span>
 
-            <h3>Services and work</h3>
+            <h3>
+              Services and portfolio
+            </h3>
 
             <p>
-              Review consulting capabilities and see templates
-              for advertisements and creative projects.
+              Explore Guidestone’s consulting capabilities and view
+              examples of campaign advertising, event promotion,
+              and political communications.
             </p>
           </a>
 
           <a class="card" href="about.html">
             <span class="card-number">02</span>
 
-            <h3>About Joe and Stephanie</h3>
+            <h3>
+              Meet our team
+            </h3>
 
             <p>
-              Learn about the firm and view the profile areas
-              for photographs and biographies.
+              Learn about Guidestone Solutions and view the profile
+              areas for Josh and Stacy.
             </p>
           </a>
 
           <a class="card" href="contact.html">
             <span class="card-number">03</span>
 
-            <h3>Start a conversation</h3>
+            <h3>
+              Contact the team
+            </h3>
 
             <p>
-              Share information about a campaign, organization,
-              opportunity, or communications challenge.
+              Tell the Guidestone Team about your campaign,
+              organization, opportunity, or communications
+              challenge.
             </p>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-cream">
       <div class="container cta">
         <div>
           <h2>
@@ -764,13 +860,15 @@
           </h2>
 
           <p>
-            Tell Guidestone Solutions about your goals,
-            audience, and current challenge.
+            Whether you are launching a campaign, supporting an
+            organization, or preparing a new initiative, the
+            Guidestone Team is ready to help build a strategy that
+            moves your work forward.
           </p>
         </div>
 
         <a class="button button-light" href="contact.html">
-          Contact Guidestone
+          Tell the Guidestone Team
         </a>
       </div>
     </section>
@@ -793,6 +891,7 @@
         <a href="services.html">Services &amp; Work</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Statement</a>
       </nav>
     </div>
   </footer>
