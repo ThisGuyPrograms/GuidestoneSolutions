@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Contact Guidestone Solutions to discuss a campaign, organization, communications project, or consulting opportunity."
+    content="Contact Guidestone Solutions to discuss a political campaign, organization, communications project, or consulting opportunity."
   >
 
   <meta name="theme-color" content="#17284b">
@@ -316,15 +316,26 @@
       background: var(--navy);
     }
 
-    .note {
-      margin-top: 35px;
-      padding: 24px;
+    .form-privacy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .form-privacy a {
+      color: var(--blue-dark);
+      font-weight: 700;
+    }
+
+    .setup-note {
+      margin-top: 30px;
+      padding: 22px;
       color: var(--muted);
       background: var(--cream);
       border-radius: var(--radius);
     }
 
-    .note strong {
+    .setup-note strong {
       display: block;
       margin-bottom: 5px;
       color: var(--navy-dark);
@@ -358,6 +369,10 @@
 
     .footer-links a {
       text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
     }
 
     @media (max-width: 850px) {
@@ -410,7 +425,11 @@
 <body>
   <header class="site-header">
     <div class="container navigation">
-      <a class="brand" href="index.html">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Guidestone Solutions home"
+      >
         <img
           class="brand-logo"
           src="guidestonelogo.jpeg"
@@ -460,9 +479,9 @@
         </h1>
 
         <p>
-          Tell the Guidestone Team about your campaign, organization,
-          communications goal, consulting need, or upcoming
-          opportunity.
+          Tell the Guidestone Team about your campaign,
+          organization, communications goal, consulting need,
+          or upcoming opportunity.
         </p>
       </div>
     </section>
@@ -489,18 +508,28 @@
               class="contact-detail"
               href="mailto:hello@guidestonesolutions.com"
             >
-              <strong>Email</strong>
+              <strong>
+                Email
+              </strong>
+
               hello@guidestonesolutions.com
             </a>
 
             <div class="contact-detail">
-              <strong>Service area</strong>
+              <strong>
+                Service area
+              </strong>
+
               Serving clients locally and nationwide
             </div>
 
             <div class="contact-detail">
-              <strong>Response time</strong>
-              24 - 48 hours
+              <strong>
+                Response time
+              </strong>
+
+              The Guidestone Team typically responds within
+              24–48 hours.
             </div>
           </div>
         </aside>
@@ -511,16 +540,22 @@
           </h2>
 
           <p>
-            Submitting this form opens the visitor’s default
-            email application.
+            Complete the form below to tell the Guidestone Team
+            about your goals, timeline, organization, and area of
+            interest.
           </p>
 
           <form
             class="contact-form"
-            action="mailto:hello@guidestonesolutions.com"
+            action="https://formspree.io/f/YOUR_FORM_ID"
             method="post"
-            enctype="text/plain"
           >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Guidestone Solutions website inquiry"
+            >
+
             <div class="form-row">
               <div class="field">
                 <label for="name">
@@ -529,7 +564,7 @@
 
                 <input
                   id="name"
-                  name="Name"
+                  name="name"
                   type="text"
                   autocomplete="name"
                   required
@@ -543,7 +578,7 @@
 
                 <input
                   id="email"
-                  name="Email"
+                  name="email"
                   type="email"
                   autocomplete="email"
                   required
@@ -558,7 +593,7 @@
 
               <input
                 id="organization"
-                name="Organization"
+                name="organization"
                 type="text"
                 autocomplete="organization"
               >
@@ -569,13 +604,17 @@
                 Area of interest
               </label>
 
-              <select id="service" name="Area of interest">
+              <select id="service" name="service">
                 <option value="">
                   Select an option
                 </option>
 
                 <option value="Campaign strategy">
                   Campaign strategy
+                </option>
+
+                <option value="Campaign management">
+                  Campaign management
                 </option>
 
                 <option value="Advertising and creative">
@@ -594,6 +633,10 @@
                   Organizational strategy
                 </option>
 
+                <option value="Event promotion">
+                  Event promotion
+                </option>
+
                 <option value="Other consulting opportunity">
                   Other consulting opportunity
                 </option>
@@ -607,24 +650,32 @@
 
               <textarea
                 id="message"
-                name="Message"
+                name="message"
                 required
               ></textarea>
             </div>
 
             <button class="submit-button" type="submit">
-              Create email message
+              Send inquiry
             </button>
+
+            <p class="form-privacy">
+              By submitting this form, you agree that Guidestone
+              Solutions may use the information provided to respond
+              to your inquiry. Review our
+              <a href="privacy.html">Privacy Statement</a>.
+            </p>
           </form>
 
-          <div class="note">
+          <div class="setup-note">
             <strong>
-              Before publishing
+              Form setup required
             </strong>
 
-            Replace every instance of
-            <code>hello@guidestonesolutions.com</code>
-            with the real business email address.
+            Replace <code>YOUR_FORM_ID</code> in the form action
+            with the ID provided by Formspree. Replace
+            <code>hello@guidestonesolutions.com</code> with the
+            final business email address.
           </div>
         </section>
       </div>
@@ -648,6 +699,7 @@
         <a href="services.html">Services &amp; Work</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Statement</a>
       </nav>
     </div>
   </footer>
